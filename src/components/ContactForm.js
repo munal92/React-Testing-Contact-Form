@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
+
 const ContactForm = () => {
   const [data, setData] = useState();
   const { register, errors, handleSubmit, reset } = useForm({
@@ -16,7 +17,7 @@ const ContactForm = () => {
         <div>
           <label htmlFor="firstName">First Name*</label>
           <input
-            name="firstName"
+            name='firstName'
             placeholder="bill"
             ref={register({ required: true, maxLength: 3 })}
           />
@@ -28,7 +29,7 @@ const ContactForm = () => {
         <div>
           <label htmlFor="lastName">Last Name*</label>
           <input
-            name="lastName"
+            name='lastName'
             placeholder="luo"
             ref={register({ required: true })}
           />
@@ -55,7 +56,7 @@ const ContactForm = () => {
             {JSON.stringify(data, null, 2)}
           </pre>
         )}
-        <input type="submit" />
+        <input  type='submit' />
       </form>
     </div>
   );
